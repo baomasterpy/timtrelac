@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo trẻ lạc - Tìm Trẻ Lạc</title>
+    
+    <!-- SEO Tags -->
+    <meta name="description" content="Báo cáo thông tin về trường hợp trẻ thất lạc">
+    <meta name="keywords" content="báo cáo trẻ lạc, thông tin trẻ thất lạc">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="assets/images/logo.png" alt="Logo Tìm Trẻ Lạc" class="logo">
+            <a href="/" class="brand-name">Tìm Trẻ Lạc</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-menu">
+            <a href="/" class="nav-link">Trang chủ</a>
+            <a href="/tim-kiem" class="nav-link">Tìm kiếm</a>
+            <a href="/bao-cao" class="nav-link active">Báo cáo trẻ lạc</a>
+            <a href="/tin-tuc" class="nav-link">Tin tức & Hướng dẫn</a>
+            <a href="/lien-he" class="nav-link">Liên hệ khẩn cấp</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item">
+                    <a href="/" class="breadcrumbs-link">Trang chủ</a>
+                </li>
+                <li class="breadcrumbs-item">Báo cáo trẻ lạc</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <section class="report-section">
+                <div class="report-header">
+                    <h1>Báo cáo trường hợp trẻ lạc</h1>
+                    <p class="report-description">
+                        Vui lòng cung cấp thông tin chi tiết và chính xác nhất có thể để giúp chúng tôi hỗ trợ tìm kiếm hiệu quả.
+                    </p>
+                </div>
+
+                <div class="report-content">
+                    <!-- Form Container -->
+                    <div class="report-form-container">
+                        <form id="reportForm" class="report-form">
+                            <!-- Thông tin cá nhân -->
+                            <div class="form-section">
+                                <h2>1. Thông tin cá nhân của trẻ</h2>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label class="form-label required">Họ và tên</label>
+                                        <input type="text" class="form-input" name="childName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Ngày sinh</label>
+                                        <input type="date" class="form-input" name="birthDate" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Giới tính</label>
+                                        <select class="form-select" name="gender" required>
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="male">Nam</option>
+                                            <option value="female">Nữ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Chiều cao (cm)</label>
+                                        <input type="number" class="form-input" name="height">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Cân nặng (kg)</label>
+                                        <input type="number" class="form-input" name="weight">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Nhóm máu</label>
+                                        <select class="form-select" name="bloodType">
+                                            <option value="">Chọn nhóm máu</option>
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="O">O</option>
+                                            <option value="AB">AB</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thông tin mất tích -->
+                            <div class="form-section">
+                                <h2>2. Thông tin mất tích</h2>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label class="form-label required">Ngày mất tích</label>
+                                        <input type="date" class="form-input" name="missingDate" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Thời gian</label>
+                                        <input type="time" class="form-input" name="missingTime" required>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label required">Địa điểm</label>
+                                        <input type="text" class="form-input" name="location" placeholder="Địa chỉ cụ thể nơi mất tích" required>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Hoàn cảnh mất tích</label>
+                                        <textarea class="form-textarea" name="circumstances" rows="4" placeholder="Mô tả chi tiết hoàn cảnh mất tích"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Đặc điểm nhận dạng -->
+                            <div class="form-section">
+                                <h2>3. Đặc điểm nhận dạng</h2>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label class="form-label required">Trang phục khi mất tích</label>
+                                        <textarea class="form-textarea" name="clothing" rows="2" placeholder="Mô tả chi tiết quần áo, giày dép..." required></textarea>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Dấu hiệu đặc biệt</label>
+                                        <textarea class="form-textarea" name="specialMarks" rows="2" placeholder="Nốt ruồi, sẹo, hình xăm..."></textarea>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Đặc điểm khác</label>
+                                        <textarea class="form-textarea" name="otherFeatures" rows="2" placeholder="Các đặc điểm nhận dạng khác..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hình ảnh -->
+                            <div class="form-section">
+                                <h2>4. Hình ảnh</h2>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label class="form-label required">Ảnh chân dung gần đây</label>
+                                        <div class="file-upload">
+                                            <input type="file" accept="image/*" name="portrait" required>
+                                            <p class="file-hint">Định dạng: JPG, PNG. Tối đa 5MB</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Ảnh khác</label>
+                                        <div class="file-upload">
+                                            <input type="file" accept="image/*" name="otherPhotos" multiple>
+                                            <p class="file-hint">Có thể chọn nhiều ảnh. Tối đa 20MB</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thông tin liên hệ -->
+                            <div class="form-section">
+                                <h2>5. Thông tin liên hệ</h2>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label class="form-label required">Họ và tên người báo cáo</label>
+                                        <input type="text" class="form-input" name="reporterName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Quan hệ với trẻ</label>
+                                        <input type="text" class="form-input" name="relationship" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label required">Số điện thoại</label>
+                                        <input type="tel" class="form-input" name="phone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-input" name="email">
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label class="form-label">Địa chỉ liên hệ</label>
+                                        <input type="text" class="form-input" name="address">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Xác nhận -->
+                            <div class="form-section">
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="consent" required>
+                                        <span>Tôi xác nhận rằng thông tin trên là chính xác và đồng ý với <a href="/dieu-khoan">điều khoản sử dụng</a> của dịch vụ</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="reset" class="btn btn-secondary">
+                                        <i class="fas fa-undo"></i>
+                                        Nhập lại
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Gửi báo cáo
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="report-sidebar">
+                        <!-- Hướng dẫn -->
+                        <div class="info-box">
+                            <h3>
+                                <i class="fas fa-info-circle"></i>
+                                Hướng dẫn
+                            </h3>
+                            <ul class="info-list">
+                                <li>Điền đầy đủ thông tin bắt buộc (có dấu *)</li>
+                                <li>Cung cấp thông tin chính xác và chi tiết nhất có thể</li>
+                                <li>Đính kèm ảnh rõ nét, chụp gần đây</li>
+                                <li>Kiểm tra kỹ thông tin trước khi gửi</li>
+                            </ul>
+                        </div>
+
+                        <!-- Liên hệ khẩn cấp -->
+                        <div class="info-box urgent">
+                            <h3>
+                                <i class="fas fa-phone"></i>
+                                Liên hệ khẩn cấp
+                            </h3>
+                            <ul class="info-list">
+                                <li>
+                                    <strong>Hotline:</strong>
+                                    <a href="tel:18001234">1800-1234</a>
+                                </li>
+                                <li>
+                                    <strong>Công an:</strong>
+                                    <a href="tel:113">113</a>
+                                </li>
+                                <li>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:hotro@timtrelac.vn">hotro@timtrelac.vn</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Lưu ý -->
+                        <div class="info-box warning">
+                            <h3>
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Lưu ý quan trọng
+                            </h3>
+                            <ul class="info-list">
+                                <li>Không cung cấp thông tin sai sự thật</li>
+                                <li>Không chia sẻ thông tin cá nhân không cần thiết</li>
+                                <li>Báo ngay cho cơ quan công an gần nhất</li>
+                                <li>Lưu giữ các bằng chứng và thông tin liên quan</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <p>Tìm Trẻ Lạc là dự án phi lợi nhuận, kết nối cộng đồng hỗ trợ tìm kiếm trẻ em thất lạc.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liên kết nhanh</h3>
+                <a href="/gioi-thieu">Giới thiệu</a>
+                <a href="/chinh-sach">Chính sách bảo mật</a>
+                <a href="/dieu-khoan">Điều khoản sử dụng</a>
+                <a href="/lien-he">Liên hệ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Kết nối</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Liên hệ khẩn cấp</h3>
+                <p><i class="fas fa-phone"></i> Hotline: 1800-XXXX</p>
+                <p><i class="fas fa-envelope"></i> Email: hotro@timtrelac.id.vn</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tìm Trẻ Lạc. Đã đăng ký bản quyền.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/report.js"></script>
+</body>
+</html>
