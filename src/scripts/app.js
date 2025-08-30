@@ -1,20 +1,23 @@
-// This file contains the JavaScript code for the website. It handles user interactions, form submissions, and any dynamic content updates on the webpage.
+// Menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('report-child-form');
-    const messageContainer = document.getElementById('message-container');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+    }
+});
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const childName = document.getElementById('child-name').value;
-        const childDescription = document.getElementById('child-description').value;
-
-        if (childName && childDescription) {
-            // Simulate sending data to a server
-            messageContainer.innerHTML = `<p>Thank you for reporting. We are looking for ${childName}.</p>`;
-            form.reset();
+// Handle scroll events
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
         } else {
-            messageContainer.innerHTML = '<p>Please fill in all fields.</p>';
+            navbar.classList.remove('scrolled');
         }
-    });
+    }
 });
