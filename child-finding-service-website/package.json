@@ -1,0 +1,25 @@
+{
+  "name": "child-finding-service-website",
+  "version": "1.0.0",
+  "description": "A website for a child-finding service.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "deploy": "gh-pages -d src"
+  },
+  "keywords": [
+    "child",
+    "finding",
+    "service",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "gh-pages": "^3.2.3"
+  },
+  "devDependencies": {},
+  "homepage": "https://yourusername.github.io/child-finding-service-website/"
+}
